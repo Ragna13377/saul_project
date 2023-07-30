@@ -1,0 +1,449 @@
+:root{
+  --color-1: #222831;
+  --color-2: #393E46;
+  --color-3: #00ADB5;
+  --color-4: #EEE;
+}
+
+.page{
+  background: var(--color-1, #222831);
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top:100px;
+}
+
+.title{
+  color: var(--color-4, #EEE);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  z-index: 10;
+}
+
+.button{
+  display: flex;
+  padding: 10px 32px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  background: rgba(57, 62, 70, 0.75);
+  backdrop-filter: blur(2px);
+  color: var(--color-4, #EEE);
+  text-shadow: rgba(0, 0, 0, 0.5) 0 4px 4px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  .button__image{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+}
+
+.button_active{
+  background: var(--color-3, #00ADB5);
+}
+
+.menu{
+  color: var(--color-4, #EEE);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  .menu__list{
+    padding: 10px;
+    align-items: flex-start;
+    display: flex;
+    gap: 48px;
+  }
+  .menu__image{
+    width: 24px;
+    height: 24px;
+  }
+  .menu__link{
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.social{
+  .social__list{
+    display: flex;
+    gap: 24px;
+  }
+  .social__list-item{
+    border-radius: 50%;
+    background: var(--color-2, #393E46);
+  }
+  .social__link{
+    display: block;
+    border-radius: 50%;
+    padding: 15px 14px 9px;
+  }
+  .social__image{
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.feedback{
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: start;
+  z-index: 10;
+  .feedback__label{
+    color: var(--color-4, #EEE);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feedback__input{
+    padding: 16px 24px;
+    border-radius: 16px;
+    background: rgba(57, 62, 70, 0.50);
+    min-width: 288px;
+    color: var(--color-4, #EEE);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    &::placeholder{
+      color: rgba(238, 238, 238, 0.50);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+  .feedback__label:has(.feedback__textarea){
+    width: 100%;
+  }
+  .feedback__textarea{
+    resize: none;
+  }
+}
+
+.header{
+  border-bottom: 1px solid rgba(238, 238, 238, 0.10);
+  margin: 0 auto;
+  .header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 96px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .header__logo{
+    color: var(--color-4, #EEE);
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.section{
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .section__description{
+    color: rgba(238, 238, 238, 0.75);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 402px;
+  }
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.main{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: rgba(238, 238, 238, 0.10);
+    top: -345px;
+    bottom: -407px;
+    left: 512px;
+  }
+}
+
+.home{
+  padding: 202px 0 64px 180px;
+  margin: 0 auto;
+  .home__doodles{
+    width: 514px;
+    height: 514px;
+    position: absolute;
+    top: -39px;
+    right: 79px;
+    background: url("../images/doodles_mixed_round.svg") center no-repeat;
+    background-size: cover;
+    filter: brightness(0.5);
+  }
+  .home__man{
+    width: 400px;
+    height: 472px;
+    position: absolute;
+    top: 145px;
+    right: 228px;
+    background: url("../images/group_2346.svg") center no-repeat;
+    background-size: cover;
+    &:after{
+      content: '';
+      width: 348px;
+      height: 24px;
+      border-radius: 400px/30px;
+      background: rgba(0, 0, 0, 0.50);
+      position: absolute;
+      bottom: 80px;
+      right: 56px;
+    }
+  }
+  .home__vector{
+    background: url("../images/vector_187.svg") center no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 222px;
+    position: absolute;
+    top: 51px;
+    left: -108px;
+  }
+  .home__title{
+    font-size: 96px;
+    line-height: 96px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .home__buttons{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 243px;
+  }
+  .home__next-section{
+    width: 96px;
+    height: 96px;
+    background-color: rgba(57, 62, 70, 0.75);
+    backdrop-filter: blur(4px);
+    font-size: 56px;
+    text-align: center;
+    color: var(--color-4, #EEE);
+    margin-left: 284px;
+  }
+}
+
+.about{
+  margin: 256px 0 483px 96px;
+  .about__doodles{
+    width: 665px;
+    height: 500px;
+    position: absolute;
+    top: -26px;
+    right: 110px;
+    background-image: url("../images/doodle_items.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+  }
+  .about__man {
+    width: 413px;
+    height: 353px;
+    position: absolute;
+    top: 199px;
+    right: 255px;
+    background-image: url("../images/group_62.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .about__ellipsis{
+    width: 348px;
+    height: 24px;
+    border-radius: 400px/30px;
+    background: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    top: 543px;
+    left: 730px;
+  }
+  .about__sleep{
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 46px;
+    background: url("../images/group_2350.svg") center no-repeat;
+    background-size: contain;
+    top: 190px;
+    left: 770px;
+  }
+  .about__vector1{
+    content: '';
+    position: absolute;
+    width: 62px;
+    height: 46px;
+    background: url("../images/vector_141.svg") center no-repeat;
+    background-size: contain;
+    top: -75px;
+    left: 0;
+  }
+  .about__vector2{
+    content: '';
+    position: absolute;
+    width: 57px;
+    height: 88px;
+    background: url("../images/lightbulb.svg") center no-repeat;
+    background-size: contain;
+    top: -9px;
+    left: 350px;
+
+  }
+  .about__vector3{
+    content: '';
+    position: absolute;
+    width: 112px;
+    height: 170px;
+    background: url("../images/vector_186.svg") center no-repeat;
+    background-size: contain;
+    top: 350px;
+    left: 160px;
+  }
+  .about__line{
+    background: rgba(238, 238, 238, 0.10);
+    height: 1px;
+    width: max(calc(100% + 96px), calc(100vw - 17px));
+    position: absolute;
+    bottom: -351px;
+    left: -96px;
+  }
+}
+
+.project{
+  padding: 268px 115px 268px;
+  background: #222831;
+  .project__title{
+    margin-bottom: 16px;
+  }
+  .project__buttons{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .project__content{
+    display: flex;
+    gap: 48px;
+  }
+  .project__overlay{
+    width: 100vw;
+  }
+  .project__bg{
+    position: absolute;
+    inset: 0;
+    background: url("../images/doodle_items.svg") repeat left top;
+    filter: brightness(0.5);
+    z-index: 2;
+  }
+}
+
+.contact{
+  padding: 258px 96px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.10);
+  .contact__title{
+    min-width: 600px;
+  }
+}
+
+.card{
+  padding: 61px 0;
+  border-radius: 16px;
+  background: rgba(57, 62, 70, 0.50);
+  backdrop-filter: blur(2px);
+  min-width: 360px;
+  max-width: 360px;
+  min-height: 280px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 10;
+  &:first-child{
+    padding: 61px 52px;
+    .card__image{
+      max-width: 265px;
+      height: 158px;
+    }
+  }
+  &:nth-child(2){
+    .card__image{
+      width: 100%;
+      height: 181px;
+    }
+  }
+  &:last-child{
+    .card__image{
+      width: 100%;
+      height: 170px;
+    }
+  }
+}
+
+.footer{
+  padding: 100px 0 167px;
+  margin: 0  auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  position: relative;
+  max-width: 1440px;
+  .footer__privacy{
+
+  }
+  &:after{
+    content: 'Terms of Service - Privacy Policy';
+    position: absolute;
+    bottom: 48px;
+    right: 96px;
+    color: rgba(238, 238, 238, 0.75);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.accent-color{
+  color: var(--color-3, #00ADB5);
+}
+
+.more-link{
+  font-weight: 700;
+  color: #EEE;
+}

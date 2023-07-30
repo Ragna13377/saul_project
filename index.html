@@ -5,13 +5,158 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <title>SaulDesign</title>
+  <meta name="description" content="CREATIVE UI DESIGNER">
+  <meta name="og:title" content="SaulDesign">
+  <meta name="og:url" content="">
+  <meta name="og:description" content="CREATIVE UI DESIGNER">
   <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">SaulDesign</div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a href="#home" class="menu__link">Home</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#about" class="menu__link">About Me</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#contact" class="menu__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section home" id="home">
+      <h1 class="title home__title">CREATIVE UI <br><span class="accent-color">DESIGNER</span></h1>
+      <div class="home__buttons">
+        <button class="button button_active">Hire me</button>
+        <button class="button">
+          <a class="button__link" href="" download="cv.7z">
+            Download CV
+            <img class="button__image" width="24" height="24" src="./images/download.svg" alt="">
+          </a>
+        </button>
+      </div>
+      <a href="#about" class="home__next-section">↓</a>
+      <div class="overlay">
+        <div class="home__doodles"></div>
+        <div class="home__man"></div>
+        <div class="home__vector"></div>
+      </div>
+    </section>
+    <section class="section about" id="about">
+      <h2 class="title">About <span class="accent-color">me</span></h2>
+      <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
+        velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.... <a href="" class="more-link">Read more</a></p>
+      <div class="overlay">
+        <div class="about__doodles"></div>
+        <div class="about__man"></div>
+        <div class="about__ellipsis"></div>
+        <div class="about__vector1"></div>
+        <div class="about__vector2"></div>
+        <div class="about__vector3"></div>
+        <div class="about__sleep"></div>
+        <div class="about__line"></div>
+      </div>
+    </section>
+    <section class="section project">
+      <h2 class="title project__title">My recent <span class="accent-color">works</span></h2>
+      <div class="project__buttons">
+        <button class="button">All</button>
+        <button class="button">UI</button>
+        <button class="button">UX</button>
+        <button class="button">Web Design</button>
+      </div>
+      <div class="project__content">
+        <article class="card">
+          <img class="card__image" src="./images/Course_Website_Landing_Page_Thumbnail_1.png" alt="">
+        </article>
+        <article class="card">
+          <img class="card__image" src="./images/Group_33.png" alt="">
+        </article>
+        <article class="card">
+          <img class="card__image" src="./images/Group_1.png" alt="">
+        </article>
+      </div>
+      <div class="overlay project__overlay">
+        <div class="project__bg"></div>
+      </div>
+    </section>
+    <section class="section contact" id="contact">
+      <h2 class="title contact__title">Got a project in <br><span class="accent-color">mind?</span></h2>
+      <form action="" method="post" enctype="multipart/form-data" class="feedback">
+        <label class="feedback__label">Your name
+          <input class="feedback__input" name="name" type="text" placeholder="Name">
+        </label>
+        <label class="feedback__label">Your email
+          <input class="feedback__input" name="email" type="email" inputmode="email" placeholder="Email">
+        </label>
+        <label class="feedback__label">Your email
+          <textarea class="feedback__input feedback__textarea" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+        </label>
+        <button class="button button_active">
+          Send Message
+          <img class="button__image" width="24" height="24" src="./images/send.svg" alt="">
+        </button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item">
+          <a href="#home" class="menu__link">
+            <img src="./images/home.svg" width="24" height="24" class="menu__image">
+            Home
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#about" class="menu__link">
+            <img src="./images/user.svg" width="24" height="24" class="menu__image">
+            About me
+          </a>
+        </li>
+        <li class="menu__list-item">
+          <a href="#contact" class="menu__link">
+            <img src="./images/phone.svg" width="24" height="24" class="menu__image">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="social">
+      <ul class="social__list">
+        <li class="social__list-item">
+          <a href="" class="social__link">
+            <img src="./images/facebook.svg" width="24" height="24" alt="facebook" class="social__image">
+          </a>
+        </li>
+        <li class="social__list-item">
+          <a href="" class="social__link">
+            <img src="./images/instagram.svg" width="24" height="24" alt="instagram" class="social__image">
+          </a>
+        </li>
+        <li class="social__list-item">
+          <a href="" class="social__link">
+            <img src="./images/twitter.svg" width="24" height="24" alt="twitter" class="social__image">
+          </a>
+        </li>
+        <li class="social__list-item">
+          <a href="" class="social__link">
+            <img src="./images/youtube.svg" width="24" height="24" alt="youtube" class="social__image">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>
