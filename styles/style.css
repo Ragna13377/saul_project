@@ -162,6 +162,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 0 auto;
 }
 .section .section__description {
   color: rgba(238, 238, 238, 0.75);
@@ -188,12 +189,11 @@
   background: rgba(238, 238, 238, 0.1);
   top: -345px;
   bottom: -407px;
-  left: 512px;
+  left: 42%;
 }
 
 .home {
   padding: 202px 0 64px 180px;
-  margin: 0 auto;
 }
 .home .home__doodles {
   width: 514px;
@@ -230,8 +230,8 @@
   width: 90px;
   height: 222px;
   position: absolute;
-  top: 51px;
-  left: -108px;
+  top: 253px;
+  left: 72px;
 }
 .home .home__title {
   font-size: 96px;
@@ -256,13 +256,13 @@
 }
 
 .about {
-  margin: 256px 0 483px 96px;
+  padding: 256px 0 483px 96px;
 }
 .about .about__doodles {
   width: 665px;
   height: 500px;
   position: absolute;
-  top: -26px;
+  top: 230px;
   right: 110px;
   background-image: url("../images/doodle_items.svg");
   background-size: cover;
@@ -274,8 +274,8 @@
   width: 413px;
   height: 353px;
   position: absolute;
-  top: 199px;
-  right: 255px;
+  top: 454px;
+  right: 405px;
   background-image: url("../images/group_62.svg");
   background-size: cover;
   background-position: center;
@@ -288,48 +288,44 @@
   border-radius: 400px/30px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 543px;
-  left: 730px;
+  bottom: 201px;
+  right: 268px;
 }
 .about .about__sleep {
-  content: "";
   position: absolute;
   width: 38px;
   height: 46px;
   background: url("../images/group_2350.svg") center no-repeat;
   background-size: contain;
-  top: 190px;
-  left: 770px;
+  top: 445px;
+  right: 537px;
 }
 .about .about__vector1 {
-  content: "";
   position: absolute;
   width: 62px;
   height: 46px;
   background: url("../images/vector_141.svg") center no-repeat;
   background-size: contain;
-  top: -75px;
-  left: 0;
+  top: 135px;
+  left: 96px;
 }
 .about .about__vector2 {
-  content: "";
   position: absolute;
   width: 57px;
   height: 88px;
   background: url("../images/lightbulb.svg") center no-repeat;
   background-size: contain;
-  top: -9px;
-  left: 350px;
+  top: 247px;
+  left: 445px;
 }
 .about .about__vector3 {
-  content: "";
   position: absolute;
   width: 112px;
   height: 170px;
   background: url("../images/vector_186.svg") center no-repeat;
   background-size: contain;
-  top: 350px;
-  left: 160px;
+  bottom: 223px;
+  left: 257px;
 }
 .about .about__line {
   background: rgba(238, 238, 238, 0.1);
@@ -358,6 +354,10 @@
 }
 .project .project__overlay {
   width: 100vw;
+  left: calc(0px - (100vw - 1440px) / 2);
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 .project .project__bg {
   position: absolute;
@@ -376,6 +376,52 @@
 }
 .contact .contact__title {
   min-width: 600px;
+}
+.contact .contact__man {
+  position: absolute;
+  width: 255px;
+  height: 348px;
+  background: url("../images/group_2372.svg") center no-repeat;
+  background-size: contain;
+  bottom: 268px;
+  left: 317px;
+  z-index: 2;
+}
+.contact .contact__ellipsis {
+  width: 190px;
+  height: 24px;
+  border-radius: 400px/30px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 251px;
+  left: 302px;
+}
+.contact .contact__vector1 {
+  position: absolute;
+  width: 140px;
+  height: 64px;
+  background: url("../images/keyboard.svg") center no-repeat;
+  background-size: contain;
+  top: 60px;
+  right: 467px;
+}
+.contact .contact__vector2 {
+  position: absolute;
+  width: 113px;
+  height: 170px;
+  background: url("../images/vector_186.svg") center no-repeat;
+  background-size: contain;
+  bottom: 370px;
+  left: 118px;
+}
+.contact .contact__vector3 {
+  position: absolute;
+  width: 58px;
+  height: 50px;
+  background: url("../images/mail.svg") center no-repeat;
+  background-size: contain;
+  bottom: 169px;
+  right: 165px;
 }
 
 .card {
@@ -408,16 +454,20 @@
 }
 
 .footer {
-  padding: 100px 0 167px;
+  border-top: 1px solid rgba(238, 238, 238, 0.1);
   margin: 0 auto;
+}
+.footer .footer__container {
+  padding: 100px 0 167px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 38px;
   position: relative;
   max-width: 1440px;
+  margin: 0 auto;
 }
-.footer:after {
+.footer .footer__container:after {
   content: "Terms of Service - Privacy Policy";
   position: absolute;
   bottom: 48px;

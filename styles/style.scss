@@ -164,6 +164,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 0 auto;
   .section__description{
     color: rgba(238, 238, 238, 0.75);
     font-size: 18px;
@@ -189,13 +190,12 @@
     background: rgba(238, 238, 238, 0.10);
     top: -345px;
     bottom: -407px;
-    left: 512px;
+    left: 42%;
   }
 }
 
 .home{
   padding: 202px 0 64px 180px;
-  margin: 0 auto;
   .home__doodles{
     width: 514px;
     height: 514px;
@@ -231,8 +231,8 @@
     width: 90px;
     height: 222px;
     position: absolute;
-    top: 51px;
-    left: -108px;
+    top: 253px;
+    left: 72px;
   }
   .home__title{
     font-size: 96px;
@@ -258,12 +258,12 @@
 }
 
 .about{
-  margin: 256px 0 483px 96px;
+  padding: 256px 0 483px 96px;
   .about__doodles{
     width: 665px;
     height: 500px;
     position: absolute;
-    top: -26px;
+    top: 230px;
     right: 110px;
     background-image: url("../images/doodle_items.svg");
     background-size: cover;
@@ -275,8 +275,8 @@
     width: 413px;
     height: 353px;
     position: absolute;
-    top: 199px;
-    right: 255px;
+    top: 454px;
+    right: 405px;
     background-image: url("../images/group_62.svg");
     background-size: cover;
     background-position: center;
@@ -289,49 +289,45 @@
     border-radius: 400px/30px;
     background: rgba(0, 0, 0, 0.50);
     position: absolute;
-    top: 543px;
-    left: 730px;
+    bottom: 201px;
+    right: 268px;
   }
   .about__sleep{
-    content: '';
     position: absolute;
     width: 38px;
     height: 46px;
     background: url("../images/group_2350.svg") center no-repeat;
     background-size: contain;
-    top: 190px;
-    left: 770px;
+    top: 445px;
+    right: 537px;
   }
   .about__vector1{
-    content: '';
     position: absolute;
     width: 62px;
     height: 46px;
     background: url("../images/vector_141.svg") center no-repeat;
     background-size: contain;
-    top: -75px;
-    left: 0;
+    top: 135px;
+    left: 96px;
   }
   .about__vector2{
-    content: '';
     position: absolute;
     width: 57px;
     height: 88px;
     background: url("../images/lightbulb.svg") center no-repeat;
     background-size: contain;
-    top: -9px;
-    left: 350px;
+    top: 247px;
+    left: 445px;
 
   }
   .about__vector3{
-    content: '';
     position: absolute;
     width: 112px;
     height: 170px;
     background: url("../images/vector_186.svg") center no-repeat;
     background-size: contain;
-    top: 350px;
-    left: 160px;
+    bottom: 223px;
+    left: 257px;
   }
   .about__line{
     background: rgba(238, 238, 238, 0.10);
@@ -360,6 +356,10 @@
   }
   .project__overlay{
     width: 100vw;
+    left: calc(0px - (100vw - 1440px) / 2);
+    top: 0;
+    bottom: 0;
+    right: 0;
   }
   .project__bg{
     position: absolute;
@@ -378,6 +378,52 @@
   border-bottom: 1px solid rgba(238, 238, 238, 0.10);
   .contact__title{
     min-width: 600px;
+  }
+  .contact__man{
+    position: absolute;
+    width: 255px;
+    height: 348px;
+    background: url("../images/group_2372.svg") center no-repeat;
+    background-size: contain;
+    bottom: 268px;
+    left: 317px;
+    z-index: 2;
+  }
+  .contact__ellipsis{
+    width: 190px;
+    height: 24px;
+    border-radius: 400px/30px;
+    background: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    bottom: 251px;
+    left: 302px;
+  }
+  .contact__vector1{
+    position: absolute;
+    width: 140px;
+    height: 64px;
+    background: url("../images/keyboard.svg") center no-repeat;
+    background-size: contain;
+    top: 60px;
+    right: 467px;
+  }
+  .contact__vector2{
+    position: absolute;
+    width: 113px;
+    height: 170px;
+    background: url("../images/vector_186.svg") center no-repeat;
+    background-size: contain;
+    bottom: 370px;
+    left: 118px;
+  }
+  .contact__vector3{
+    position: absolute;
+    width: 58px;
+    height: 50px;
+    background: url("../images/mail.svg") center no-repeat;
+    background-size: contain;
+    bottom: 169px;
+    right: 165px;
   }
 }
 
@@ -415,27 +461,28 @@
 }
 
 .footer{
-  padding: 100px 0 167px;
-  margin: 0  auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 38px;
-  position: relative;
-  max-width: 1440px;
-  .footer__privacy{
-
-  }
-  &:after{
-    content: 'Terms of Service - Privacy Policy';
-    position: absolute;
-    bottom: 48px;
-    right: 96px;
-    color: rgba(238, 238, 238, 0.75);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  border-top: 1px solid rgba(238, 238, 238, 0.10);
+  margin: 0 auto;
+  .footer__container{
+    padding: 100px 0 167px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    &:after{
+      content: 'Terms of Service - Privacy Policy';
+      position: absolute;
+      bottom: 48px;
+      right: 96px;
+      color: rgba(238, 238, 238, 0.75);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 }
 
